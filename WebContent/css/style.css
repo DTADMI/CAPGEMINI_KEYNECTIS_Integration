@@ -1,0 +1,132 @@
+.Body_Accueil {
+	background-color: rgb(0, 0, 0);
+	margin: 0
+}
+
+.AllButton {
+	font-family: arial, helvetica;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: bold;
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	border-width: 2;
+	border-style: solid;
+	border-color: rgb(204, 232, 58);
+	cursor: pointer;
+}
+
+.AllButtonInverse {
+	font-family: arial, helvetica;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: bold;
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	border-width: 2;
+	border-style: solid;
+	border-color: rgb(204, 232, 58);
+	cursor: pointer;
+}
+
+.MenuAccueil {
+	font: normal 14px Trebuchet MS;
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	border: 2px rgb(204, 232, 58) solid;
+	cursor: pointer;
+}
+
+.copyright {
+	font-family: arial, helvetica;
+	font-size: 11px;
+	color: rgb(11, 73, 157);
+}
+
+.Arial11Bold {
+	font-family: arial, helvetica;
+	font-size: 11px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: rgb(0, 0, 0);
+}
+
+
+.EditBox {
+	font-family: arial, helvetica;
+	font-size: 11px;
+	font-style: normal;
+	border-width: 1;
+	border-style: solid;
+	border-color: rgb(204, 232, 58);
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	padding-left: 1px;
+}
+
+
+
+.tdTitre {
+	font-size: 22px;
+	font-family: Trebuchet MS, helvetica;
+	color: rgb(0, 0, 0);
+}
+
+.contenuBlack {
+	font-size: 11px;
+	font-family: arial, helvetica;
+	color: rgb(0, 0, 0);
+	background-color: rgb(249, 249, 226);
+}
+
+.fond {
+	background-color: rgb(255, 255, 255);
+}
+
+.contenu {
+	font-family: arial, helvetica;
+	color: rgb(249, 249, 226);
+}
+.celluleOrange {
+	border: 1.5pt solid #ff9900;
+	background: #ffcc00;
+	font-family: arial, helvetica;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.celluleOrangePointer {
+	border: 1.5pt solid #ff9900;
+	background: #ffcc00;
+	font-family: arial, helvetica;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	cursor:pointer;
+}
+
+.tableBordureOrange {
+	border: 1.5pt solid #ff9900;
+}
+
+.nomSoc {
+	font-family: Trebuchet MS, arial, helvetica;
+	font-size: 20px;
+	font-weight: bold;
+	position: absolute;
+	top: 40px;
+	left: 60px;
+	text-align: center;
+}
+
+.tableInfoStyle {
+	display: none;
+	position: absolute;
+	font: normal bold 11px arial, helvetica;
+	color: rgb(0,75,85);
+	background-color: rgb(249, 249, 226);
+	border: 2px rgb(204, 232, 58) solid;
+	z-index: 1
+}

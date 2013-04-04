@@ -1,0 +1,54 @@
+/* Provided by MyFreeTemplates.com */
+
+.nomSoc {
+	font-family:Trebuchet MS, arial;
+	font-size:18px;
+	color:rgb(255,255,255);
+}
+
+.content {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 20px
+}
+body{background-color: #FFFFFF;}
+
+body, p, table, td {
+	font-size: 11px;
+	font-family: Verdana,sans-serif;
+}
+
+.navmenu {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.navmenuPointer {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 11px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.basemenu {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+.style2 {
+	color: #FFFFFF;
+	font-size: 10px;	
+}
+
+.menuCell {
+	cursor: pointer;
+}
+
+.navspacers {
+	font-size: 12px;
+	font-weight: bold;
+	color: #CCCCCC;
+}
