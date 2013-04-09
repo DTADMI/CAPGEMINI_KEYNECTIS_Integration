@@ -1,12 +1,20 @@
+<%@page import="fr.capgemini.projets.tests.kwebsign.main.PDFDocumentCreator"%>
 <%@page import="java.util.logging.Logger"%>
 <%@page import="org.apache.commons.logging.impl.Log4JLogger"%>
+<%@page import="com.lowagie.text.*"%>
+
 <%!
 private Logger log1 = Logger.getLogger("demo6p1.jsp");
+//private PDFDocumentCreator pdc = new PDFDocumentCreator();
 private static final String PDF_FILE_NAME = "In/Test.pdf";
+//String str = pdc.createPDFDocToSign();
+//private static final String PDF_FILE_NAME = str;
+
 %>
 <%
-log1.info("demo6p1.jsp: Début _ Page principale _ Cadre de saisie des informations");
-log1.info("demo6p1.jsp ligne 5: Début _ Initialisation statique de la variable PDF_FILE_NAME: lien vers le fichier à tester ("+ PDF_FILE_NAME +")");
+session.setAttribute("PDF_FILE_NAME",PDF_FILE_NAME);
+log1.info("demo6p1.jsp: Début _ Page principale _ Cadre de saisie des informations\n");
+log1.info("demo6p1.jsp ligne 5: Début _ Initialisation statique de la variable PDF_FILE_NAME: lien vers le fichier à tester ("+ PDF_FILE_NAME +")\n");
 %>
 <html>
 <head>
@@ -22,7 +30,7 @@ log1.info("demo6p1.jsp ligne 5: Début _ Initialisation statique de la variable P
 	    if(document.getElementsByName("tel")[0].value.length==0)
 	    {
 	    	<%
-    			log1.info("demo6p1.jsp _ ligne 27: fonction Valider() - Validation incorrecte sans numéro");
+    			log1.info("demo6p1.jsp _ ligne 27: fonction Valider() - Validation incorrecte sans numéro\n");
     		%>
 	    	alert("Veuillez saisir le num"+unescape('%E9')+"ro de t"+unescape('%E9')+"l"+unescape('%E9')+"phone.");
 	    	
@@ -31,11 +39,11 @@ log1.info("demo6p1.jsp ligne 5: Début _ Initialisation statique de la variable P
 	    {
 			<%
 		    	log1.info("demo6p1.jsp _ ligne 40: fonction Valider() - Validation _ formulaire soumis au serveur: nom, prenom, email et tel transmis à demo6p2.jsp ");
-		    	log1.info("demo6p1.jsp: informations récupérées du formulaire");
-		    	log1.info("demo6p1.jsp: nom = "+ session.getAttribute("nom"));
-		    	log1.info("demo6p1.jsp: prenom = "+ session.getAttribute("prenom"));
-		    	log1.info("demo6p1.jsp: email = "+ session.getAttribute("email"));
-		    	log1.info("demo6p1.jsp: tel = "+ session.getAttribute("tel"));
+		    	log1.info("demo6p1.jsp: informations récupérées du formulaire\n");
+		    	log1.info("demo6p1.jsp: nom = "+ session.getAttribute("nom")+"\n");
+		    	log1.info("demo6p1.jsp: prenom = "+ session.getAttribute("prenom")+"\n");
+		    	log1.info("demo6p1.jsp: email = "+ session.getAttribute("email")+"\n");
+		    	log1.info("demo6p1.jsp: tel = "+ session.getAttribute("tel")+"\n");
 	    	%>
 	    	document.mainForm.submit();	    	
 	    }
@@ -44,7 +52,7 @@ log1.info("demo6p1.jsp ligne 5: Début _ Initialisation statique de la variable P
   {
     location.replace("demo6p1.jsp");
     <%
-    	log1.info("demo6p1.jsp _ ligne 45: fonction Annuler() - Réinitialisation de demo6p1.jsp");
+    	log1.info("demo6p1.jsp _ ligne 45: fonction Annuler() - Réinitialisation de demo6p1.jsp\n");
     %>
   }
   </script>

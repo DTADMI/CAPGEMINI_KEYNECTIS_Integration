@@ -26,27 +26,27 @@ if ((pageDemo != null)
 } 
 else 
 {
-	log.info("index.jsp: Début de la démo _ Page principale encadrant tout le reste");
+	log.info("index.jsp: Début de la démo _ Page principale encadrant tout le reste\n");
 	soc = request.getParameter("soc");
-	log.info("index.jsp _ ligne 30: Instanciation de la variable String soc par récupération du paramètre soc de la requête");
-	log.info("index.jsp: Variable soc = "+ soc);
+	log.info("index.jsp _ ligne 30: Instanciation de la variable String soc par récupération du paramètre soc de la requête\n");
+	log.info("index.jsp: Variable soc = "+ soc+"\n");
 	
 
 	if(soc==null) 
 	{
 		// apres clic sur goHome()
-		log.info("index.jsp: soc = null car première ouverture de la page");
+		log.info("index.jsp: soc = null car première ouverture de la page\n");
 		soc = (String) session.getAttribute("soc");
-		log.info("index.jsp _ ligne 39: Instanciation de la variable String soc par récupération de l'attribut soc de la session ");
+		log.info("index.jsp _ ligne 39: Instanciation de la variable String soc par récupération de l'attribut soc de la session \n");
 		log.info("index.jsp: Variable soc = "+ soc);
 	} 
 	else 
 	{
 		// on met en session pour reutilisation lorsqu'on repassera par cette page apres la page 4
-		log.info("index.jsp: soc!=null car retour sur la page");
-		log.info("index.jsp _ ligne 48: Mise en session de la variable soc pour récupération de l'attribut lorsqu'on repassera par cette page après la 4 ");
+		log.info("index.jsp: soc!=null car retour sur la page\n");
+		log.info("index.jsp _ ligne 48: Mise en session de la variable soc pour récupération de l'attribut lorsqu'on repassera par cette page après la 4 \n");
 		session.setAttribute("soc", soc);
-		log.info("index.jsp: Variable soc = " + soc);
+		log.info("index.jsp: Variable soc = " + soc + "\n");
 	}
 }
 %>
@@ -90,7 +90,7 @@ function goHome()
 {
 	location.href="cadre.jsp";
 	<%
-		log.info("index.jsp _ ligne 91: fonction goHome() - Référencement à cadre.jsp");
+		log.info("index.jsp _ ligne 91: fonction goHome() - Référencement à cadre.jsp\n");
 	%>
 }
 </script>

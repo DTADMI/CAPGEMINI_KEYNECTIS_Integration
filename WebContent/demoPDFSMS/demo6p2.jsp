@@ -2,6 +2,7 @@
 <%@page import="org.apache.commons.logging.impl.Log4JLogger"%>
 <%!
 private static final String PDF_FILE_NAME = "In/Test.pdf";
+//private static final String PDF_FILE_NAME = this.getServletContext().getRealPath((String)session.getAttribute("PDF_FILE_NAME"));
 private static final String CERT = "CERT";
 private static final String OUT = "Out";
 
@@ -12,9 +13,9 @@ public Logger log2 = Logger.getLogger("demo6p2.jsp");
 %>
 
 <%
-log2.info("demo6p2.jsp: Début _ Page de présentation du document à signer et de validation des conditions générales");
-log2.info("demo6p2.jsp _ ligne 4: Nouvelle Initialisation statique de la variable PDF_FILE_NAME: lien vers le fichier à tester ("+ PDF_FILE_NAME +")");
-log2.info("demo6p2.jsp _ lignes 5 et 6: Initialisation statique du répertoire des certificats: " + CERT + "  et du répertoire de sauvegarde: "+ OUT +")");
+log2.info("demo6p2.jsp: Début _ Page de présentation du document à signer et de validation des conditions générales\n");
+log2.info("demo6p2.jsp _ ligne 4: Nouvelle Initialisation statique de la variable PDF_FILE_NAME: lien vers le fichier à tester ("+ PDF_FILE_NAME +")\n");
+log2.info("demo6p2.jsp _ lignes 5 et 6: Initialisation statique du répertoire des certificats: " + CERT + "  et du répertoire de sauvegarde: "+ OUT +")\n");
 %>
 
 <%
@@ -24,7 +25,7 @@ log2.info("demo6p2.jsp _ lignes 5 et 6: Initialisation statique du répertoire de
     String email=request.getParameter("email");
 	String tel = request.getParameter("tel");
 	
-	log2.info("demo6p2.jsp _ lignes 22 à 25: Récupération des paramètres requête nom: " + nom + ", prenom: " + prenom + ", email: " + email + " et tel: " + tel);
+	log2.info("demo6p2.jsp _ lignes 22 à 25: Récupération des paramètres requête nom: " + nom + ", prenom: " + prenom + ", email: " + email + " et tel: " + tel +"\n");
     
     session.setAttribute("nom",nom);
     session.setAttribute("PDF_FILE_NAME",PDF_FILE_NAME);
@@ -34,7 +35,7 @@ log2.info("demo6p2.jsp _ lignes 5 et 6: Initialisation statique du répertoire de
 	session.setAttribute("CERT",CERT);
 	session.setAttribute("OUT",OUT);
 	
-	log2.info("demo6p2.jsp _ lignes 29 à 35: Mise en session des attributs nom: " + nom + ", PDF_FILE_NAME:"+ PDF_FILE_NAME + " prenom: " + prenom + ", email: " + email + ", tel: " + tel + ", CERT: " + CERT + " et OUT: " + OUT);
+	log2.info("demo6p2.jsp _ lignes 29 à 35: Mise en session des attributs nom: " + nom + ", PDF_FILE_NAME:"+ PDF_FILE_NAME + " prenom: " + prenom + ", email: " + email + ", tel: " + tel + ", CERT: " + CERT + " et OUT: " + OUT +"\n");
 
 %>
 <html>
@@ -49,14 +50,14 @@ log2.info("demo6p2.jsp _ lignes 5 et 6: Initialisation statique du répertoire de
   function Valider()
   {
 	  <%
-	  log2.info("demo6p2.jsp _ ligne 54: fonction Valider() - Validation _ formulaire soumis au serveur : jamais appelé ");
+	  log2.info("demo6p2.jsp _ ligne 54: fonction Valider() - Validation _ formulaire soumis au serveur : jamais appelé \n");
 	  %>
 	  document.mainForm.submit();
   }
   function Annuler()
   {
 	  <%
-  		log2.info("demo6p2.jsp _ ligne 61: fonction Annuler() - Réinitialisation de demo6p1.jsp : Jamais appelé");
+  		log2.info("demo6p2.jsp _ ligne 61: fonction Annuler() - Réinitialisation de demo6p1.jsp : Jamais appelé\n");
  	 %>
     location.replace("demo6p1.jsp");
   }

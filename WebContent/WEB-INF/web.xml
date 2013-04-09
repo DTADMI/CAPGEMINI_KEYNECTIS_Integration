@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="2.4" 
-	xmlns="http://java.sun.com/xml/ns/j2ee" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
 	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 	<servlet>
@@ -9,17 +8,39 @@
 		Page de démo: saisie des informations de l'utilisateur</description>
 		<display-name>FileCertification</display-name>
 		<servlet-name>FileCertification</servlet-name>
-		<jsp-file>/index.jsp</jsp-file>		
+		<jsp-file>/index.jsp</jsp-file>
 		<init-param>
-		    <param-name>Name</param-name>
-		    <param-value>DURAND</param-value>
+			<param-name>Name</param-name>
+			<param-value>DURAND</param-value>
 		</init-param>
-		 <load-on-startup>1</load-on-startup>		
+		
 	</servlet>
+	<servlet>
+		<description>
+		Servlet de commane de la page index.jsp</description>
+		<display-name>KWebSignControlInterface</display-name>
+		<servlet-name>KWebSignControlInterface</servlet-name>
+		<jsp-file>/index.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>KWebSignController</servlet-name>
+		<servlet-class>fr/capgemini/projets/tests/kwebsign/controller/KWebSignController</servlet-class>
+		
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
 	<servlet-mapping>
 		<servlet-name>FileCertification</servlet-name>
-		<url-pattern>
-		/FileCertification</url-pattern>
+		<url-pattern>/FileCertification</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>KWebSignControlInterface</servlet-name>
+		<url-pattern>/KWebSignControlInterface</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>KWebSignController</servlet-name>
+		<url-pattern>/Authentification</url-pattern>
 	</servlet-mapping>
 
 </web-app>

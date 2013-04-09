@@ -8,14 +8,14 @@ public Logger log5 = Logger.getLogger("demo6p5.jsp");
 %>
 
 <%
-	log5.info("demo6p5.jsp: Début _ page de retour _ réponse du portail https://keynectis.kwebsign.net/QS/Page1V2");	
+	log5.info("demo6p5.jsp: Début _ page de retour _ réponse du portail https://keynectis.kwebsign.net/QS/Page1V2 \n");	
 %>
 
 <%
 String hashBase64 = (String)session.getAttribute("hashBase64");
 session.removeAttribute("hashBase64");
-log5.info("demo6p5.jsp: récupération et suppression du hashBase64/"+ hashBase64+ " en attribut de session.");
-log5.info("demo6p5.jsp: récupération des fichier pdf de sortie, transnum, et status en paramètres de requête. La page affichée dépend désormais du status. Retour sur p1.jsp en cas de succès");
+log5.info("demo6p5.jsp: récupération et suppression du hashBase64/"+ hashBase64+ " en attribut de session. \n");
+log5.info("demo6p5.jsp: récupération des fichier pdf de sortie, transnum, et status en paramètres de requête. La page affichée dépend désormais du status. Retour sur p1.jsp en cas de succès \n");
     String pdfOutPath = request.getParameter("pdfOutPath");
     String transNum = request.getParameter("transNum");
 	String status = request.getParameter("status");
