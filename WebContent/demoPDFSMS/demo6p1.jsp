@@ -6,7 +6,8 @@
 <%!
 private Logger log1 = Logger.getLogger("demo6p1.jsp");
 //private PDFDocumentCreator pdc = new PDFDocumentCreator();
-private static final String PDF_FILE_NAME = "In/Test.pdf";
+//private static final String PDF_FILE_NAME = "In/Test.pdf";
+private static final String PDF_FILE_NAME = "In/hello_out.pdf";
 //String str = pdc.createPDFDocToSign();
 //private static final String PDF_FILE_NAME = str;
 

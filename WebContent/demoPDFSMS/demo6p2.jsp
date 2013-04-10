@@ -1,7 +1,8 @@
 <%@page import="java.util.logging.Logger"%>
 <%@page import="org.apache.commons.logging.impl.Log4JLogger"%>
 <%!
-private static final String PDF_FILE_NAME = "In/Test.pdf";
+//private static final String PDF_FILE_NAME = "In/Test.pdf";
+private static final String PDF_FILE_NAME = "In/hello_out.pdf";
 //private static final String PDF_FILE_NAME = this.getServletContext().getRealPath((String)session.getAttribute("PDF_FILE_NAME"));
 private static final String CERT = "CERT";
 private static final String OUT = "Out";
